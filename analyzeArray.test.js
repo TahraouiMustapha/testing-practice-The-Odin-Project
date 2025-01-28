@@ -11,7 +11,11 @@ describe('analyzeArray',() => {
         expect(()=> analyzeArray([1, 'hi', 3, '3'])).toThrow('You must input an array of numbers!');
     })
 
-    test.skip('it works with array of numbers', ()=> {
+    test('return an empty obj with an empty array', () => {
+        expect(analyzeArray([])).toEqual({});
+    })
+
+    test('it works with array of numbers', ()=> {
         expect(analyzeArray([1,8,3,4,2,6])).toEqual({
             average: 4,
             min: 1,
