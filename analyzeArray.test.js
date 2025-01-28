@@ -4,6 +4,7 @@ describe('analyzeArray',() => {
     test('it doesn\'t accept non-array argument', () => {
         expect(() => analyzeArray(null)).toThrow("You must input an array of numbers!");
         expect(() => analyzeArray(2)).toThrow("You must input an array of numbers!");
+        expect(() => analyzeArray('nothing')).toThrow("You must input an array of numbers!");
     })
 
     test.skip('it doesn\'t accept an array within a non-number value', () => {
